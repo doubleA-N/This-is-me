@@ -35,8 +35,9 @@ const MobileNavigation = () => {
         </div>
         <div className="mt-auto">
           <div className="flex justify-end gap-4 flex-end pt-6">
-            {NAVIGATION_LINKS.map((icon) => (
+            {NAVIGATION_LINKS.map((icon, idx) => (
               <Icon
+                key={idx}
                 src={icon.src}
                 size={ICON_SIZE.medium}
                 alt={icon.alt}
