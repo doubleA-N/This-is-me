@@ -1,18 +1,38 @@
+## This is me
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+I designed and developed this project to showcase myself as a web application.
 
 ## Getting Started
 
-First, run the development server:
+Before you begin, ensure you have met the following requirements:
+
+- You have a Mac / Linux Workstation.
+- You have installed the following software:
+  - Node JS 16.x
+
+Then, start installing all dependencies and run the development server:
 
 ```bash
+npm i
 npm run dev
 ```
 
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Contributing to `This is me`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To contribute to `this is me`, follow these steps:
+
+1. Clone this repository.
+2. Create a feature branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin <branch_name>`
+5. Create the pull request against `master`.
+
+## Contact
+
+If you want to contact someone about this project, please refer to the following email: thidarat.chai.mail@gmail.com
 
 ## Learn More
 
