@@ -4,13 +4,10 @@ import { ICONS, ICON_SIZE } from '../../commons/icons/const'
 import DesktopSeparateIcon from '../../commons/icons/desktopSeparateIcon'
 import Icon from '../../commons/icons'
 import { NAVIGATION_LINKS, NAVIGATION_MENUS } from '../const'
+import { handleSocialLinkClick } from '../utils'
 
 const DesktopNavigation = () => {
   const [isMenuActive, setIsMenuActive] = useState(0)
-
-  const handleSocialLinkClick = (link) => {
-    window.open(link, '_blank').focus()
-  }
 
   return (
     <React.Fragment>
