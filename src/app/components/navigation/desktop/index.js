@@ -44,7 +44,7 @@ const DesktopNavigation = () => {
           </div>
         ))}
       </ul>
-      <div className="lg:flex lg:items-center gap-2 cursor-pointer">
+      <div className="hidden lg:flex lg:items-center gap-2 cursor-pointer">
         {NAVIGATION_LINKS.map((icon) => (
           <Icon
             src={icon.src}
