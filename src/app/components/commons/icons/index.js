@@ -12,6 +12,7 @@ const Icon = ({ alt, className, src, size, onClick }) => {
         width={size || ICON_SIZE.default}
         height={size || ICON_SIZE.default}
         onClick={onClick}
+        priority
       />
     </div>
   )
