@@ -1,55 +1,27 @@
 'use client'
 import React, { useEffect } from 'react'
-import Image from 'next/image'
-import { ICONS, ICON_SIZE } from '/src/app/components/commons/icons/const'
 import DesktopNavigation from './desktop'
 import MobileNavigation from './mobile'
+import { handleOpenMobileNav } from './utils'
 
 const Navigation = () => {
-  const handleOpenMobileNav = () => {
-    // open
-    const burgers = document.querySelectorAll('.navbar-burger')
-    const menus = document.querySelectorAll('.navbar-menu')
-
-    burgers?.forEach((burger) => {
-      burger.addEventListener('click', () => {
-        menus?.forEach((menu) => {
-          menu.classList.toggle('hidden')
-        })
-      })
-    })
-
-    // close
-    const closes = document.querySelectorAll('.navbar-close')
-    const backdrops = document.querySelectorAll('.navbar-backdrop')
-
-    closes?.forEach((close) => {
-      close.addEventListener('click', () => {
-        menus?.forEach((menu) => {
-          menu.classList.toggle('hidden')
-        })
-      })
-    })
-
-    backdrops?.forEach((backdrop) => {
-      backdrop.addEventListener('click', () => {
-        menus?.forEach((menu) => {
-          menu.classList.toggle('hidden')
-        })
-      })
-    })
-  }
-
   useEffect(() => {
     document.addEventListener('DOMContentLoaded', handleOpenMobileNav(), true)
 
-    return () => {}
+    return () => {
+      document.removeEventListener(
+        'DOMContentLoaded',
+        handleOpenMobileNav(),
+        true,
+      )
+    }
   }, [])
 
   return (
     <div>
       <nav className="relative px-4 py-4 flex justify-between items-center bg-white shadow">
         <DesktopNavigation />
+        <span className="lg:hidden font-bold">This is me!</span>
         <div className="lg:hidden">
           <button className="navbar-burger flex items-center text-violet-700 p-3">
             <svg
