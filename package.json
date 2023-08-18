@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
+    "clsx": "2.0.0",
     "eslint": "8.46.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-next": "13.4.13",
@@ -26,4 +27,3 @@
     "sass": "1.64.2"
   }
 }
-
