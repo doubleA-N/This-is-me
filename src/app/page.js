@@ -1,11 +1,10 @@
-import Navigation from './components/navigation'
-import Section from './components/sections'
+import React from 'react'
+import CommonLayout from './components/common-layout'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <Navigation />
-      <Section />
+      <CommonLayout />
     </main>
   )
 }
