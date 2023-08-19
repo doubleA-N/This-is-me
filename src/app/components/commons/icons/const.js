@@ -10,7 +10,7 @@ export const ICON_SIZE = {
 
 export const ICONS = {
     facebook: '/facebook.png',
-    github: '/gitHub.png',
+    github: '/github.png',
     linkedIn: '/linkedin.png',
     thisIsMe: '/this-is-me.png'
 }
