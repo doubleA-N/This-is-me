@@ -6,8 +6,8 @@ import { downloadMyResume } from './utils'
 const MeSection = () => {
   return (
     <div className="h-screen bg-cover bg-center bg-gradient-to-r from-indigo-200">
-      <div className="flex flex-row justify-center m-20">
-        <div className="flex flex-col items-center justify-center w-2/4 animate-bottom-to-top my-8">
+      <div className="flex flex-col-reverse md:flex-row justify-center m-8 md:m-20">
+        <div className="flex flex-col items-center justify-center w-4/4 md:w-2/4 animate-bottom-to-top my-8">
           <div className="flex flex-col">
             <span className="text-violet-700 text-5xl font-bold">
               Hi, I'm Aey
@@ -34,7 +34,7 @@ const MeSection = () => {
             </Button>
           </div>
         </div>
-        <div className="w-2/4 flex justify-end">
+        <div className="w-4/4 md:w-2/4 flex justify-end ">
           <div className="bg-contain bg-center bg-violet-600 rounded-l-full">
             <Image alt={'me-pic'} src="/me.png" width={400} height={400} />
           </div>
