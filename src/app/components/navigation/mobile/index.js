@@ -22,7 +22,7 @@ const MobileNavigation = () => {
         <div>
           <ul>
             {NAVIGATION_MENUS.map((menu, idx) => (
-              <li key={idx} className="mb-1">
+              <li key={idx} className="mb-1 nav-list">
                 <a
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-violet-200 hover:text-violet-600 rounded"
                   href="#"

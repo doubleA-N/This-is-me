@@ -6,14 +6,19 @@ import Icon from '../../commons/icons'
 import { NAVIGATION_LINKS, NAVIGATION_MENUS } from '../const'
 import { handleSocialLinkClick } from '../utils'
 
-const DesktopNavigation = () => {
+const DesktopNavigation = ({ setSection }) => {
   const [isMenuActive, setIsMenuActive] = useState(0)
+
+  const setSectionToScroll = (idx) => {
+    setIsMenuActive(idx)
+    setSection && setSection(idx)
+  }
 
   return (
     <React.Fragment>
       <Icon
         className="text-3xl font-bold leading-none"
-        onClick={() => setIsMenuActive(0)}
+        onClick={() => setSectionToScroll(0)}
         src={ICONS.thisIsMe}
         size={ICON_SIZE.extraLarge}
         alt="Picture of the author"
@@ -32,7 +37,7 @@ const DesktopNavigation = () => {
                     'text-violet-700 font-bold': isMenuActive === idx,
                   },
                 )}
-                onClickCapture={() => setIsMenuActive(idx)}
+                onClickCapture={() => setSectionToScroll(idx)}
               >
                 {menu.title}
               </span>

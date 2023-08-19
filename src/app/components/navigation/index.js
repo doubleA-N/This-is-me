@@ -1,26 +1,30 @@
-'use client'
 import React, { useEffect } from 'react'
 import DesktopNavigation from './desktop'
 import MobileNavigation from './mobile'
 import { handleOpenMobileNav } from './utils'
+import propTypes from 'eslint-plugin-react/lib/rules/prop-types'
 
-const Navigation = () => {
+const Navigation = ({ setSection }) => {
   useEffect(() => {
-    document.addEventListener('DOMContentLoaded', handleOpenMobileNav(), true)
+    document.addEventListener(
+      'DOMContentLoaded',
+      handleOpenMobileNav(setSection),
+      true,
+    )
 
     return () => {
       document.removeEventListener(
         'DOMContentLoaded',
-        handleOpenMobileNav(),
+        handleOpenMobileNav(setSection),
         true,
       )
     }
   }, [])
 
   return (
-    <div>
+    <div className="sticky top-0 md:z-10">
       <nav className="relative px-4 py-4 flex justify-between items-center bg-white shadow">
-        <DesktopNavigation />
+        <DesktopNavigation setSection={setSection} />
         <span className="lg:hidden font-bold">This is me!</span>
         <div className="lg:hidden">
           <button className="navbar-burger flex items-center text-violet-700 p-3">
@@ -37,6 +41,10 @@ const Navigation = () => {
       <MobileNavigation />
     </div>
   )
+}
+
+Navigation.propTypes = {
+  setSection: propTypes.func,
 }
 
 export default Navigation
