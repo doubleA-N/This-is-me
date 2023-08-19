@@ -40,7 +40,7 @@ const MeSection = () => {
         </div>
         <div className="w-4/4 md:w-2/4 flex justify-end ">
           <div className="bg-contain bg-center bg-violet-600 rounded-l-full">
-            <Image alt={'me-pic'} src="/me.png" width={400} height={400} />
+            <Image alt={'me-pic'} src="/its-me.png" width={400} height={400} />
           </div>
         </div>
       </div>
