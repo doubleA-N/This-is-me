@@ -1,11 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
+import { Element } from 'react-scroll'
 import Button from '../commons/button'
 import { downloadMyResume } from './utils'
 
 const MeSection = () => {
   return (
-    <div className="h-screen bg-cover bg-center bg-gradient-to-r from-indigo-200">
+    <Element
+      name={0}
+      className="h-screen bg-cover bg-center bg-gradient-to-r from-indigo-200"
+    >
       <div className="flex flex-col-reverse md:flex-row justify-center m-8 md:m-20">
         <div className="flex flex-col items-center justify-center w-4/4 md:w-2/4 animate-bottom-to-top my-8">
           <div className="flex flex-col">
@@ -19,9 +23,9 @@ const MeSection = () => {
               experience :D
             </span>
             <Button
-              className="animate-bounce w-fit bg-violet-700 hover:bg-violet-900 text-white font-bold my-8 py-2 px-4 rounded inline-flex items-center"
+              className="md:animate-bounce w-fit bg-violet-700 hover:bg-violet-900 text-white font-bold my-8 py-2 px-4 rounded flex items-center"
               label="Download My Resume"
-              type='submit'
+              type="submit"
               onClickFunction={downloadMyResume}
             >
               <svg
@@ -40,7 +44,7 @@ const MeSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   )
 }
 

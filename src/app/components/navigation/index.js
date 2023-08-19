@@ -6,7 +6,11 @@ import propTypes from 'eslint-plugin-react/lib/rules/prop-types'
 
 const Navigation = ({ setSection }) => {
   useEffect(() => {
-    document.addEventListener('DOMContentLoaded', handleOpenMobileNav(setSection), true)
+    document.addEventListener(
+      'DOMContentLoaded',
+      handleOpenMobileNav(setSection),
+      true,
+    )
 
     return () => {
       document.removeEventListener(
@@ -18,9 +22,9 @@ const Navigation = ({ setSection }) => {
   }, [])
 
   return (
-    <div>
+    <div className="sticky top-0 md:z-10">
       <nav className="relative px-4 py-4 flex justify-between items-center bg-white shadow">
-        <DesktopNavigation setSection={setSection}/>
+        <DesktopNavigation setSection={setSection} />
         <span className="lg:hidden font-bold">This is me!</span>
         <div className="lg:hidden">
           <button className="navbar-burger flex items-center text-violet-700 p-3">
