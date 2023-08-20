@@ -11,7 +11,7 @@ const Section = ({ section }) => {
         duration: 1500,
         delay: 2,
         smooth: true,
-        offset: 20,
+        offset: -120,
       })
     }
 

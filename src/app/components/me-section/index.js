@@ -8,7 +8,7 @@ const MeSection = () => {
   return (
     <Element
       name={0}
-      className="h-screen bg-cover bg-center bg-gradient-to-r from-indigo-200"
+      className="h-fit bg-cover bg-center bg-gradient-to-r from-indigo-200"
     >
       <div className="flex flex-col-reverse md:flex-row justify-center m-8 md:m-20">
         <div className="flex flex-col items-center justify-center w-4/4 md:w-2/4 animate-bottom-to-top my-8">
@@ -29,7 +29,7 @@ const MeSection = () => {
               onClickFunction={downloadMyResume}
             >
               <svg
-                class="fill-current w-4 h-4 mr-2"
+                className="fill-current w-4 h-4 mr-2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >

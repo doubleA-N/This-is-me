@@ -22,7 +22,7 @@ const Navigation = ({ setSection }) => {
   }, [])
 
   return (
-    <div className="sticky top-0 md:z-10">
+    <div className="sticky top-0 z-20">
       <nav className="relative px-4 py-4 flex justify-between items-center bg-white shadow">
         <DesktopNavigation setSection={setSection} />
         <span className="lg:hidden font-bold">This is me!</span>
