@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import clsx from 'clsx'
+import PropTypes from 'prop-types'
 import { ICONS, ICON_SIZE } from '../../commons/icons/const'
 import DesktopSeparateIcon from '../../commons/icons/desktopSeparateIcon'
 import Icon from '../../commons/icons'
 import { NAVIGATION_LINKS, NAVIGATION_MENUS } from '../const'
 import { handleSocialLinkClick } from '../utils'
 
-const DesktopNavigation = ({ setSection }) => {
-  const [isMenuActive, setIsMenuActive] = useState(0)
-
+const DesktopNavigation = ({ section, setSection }) => {
   const setSectionToScroll = (idx) => {
-    setIsMenuActive(idx)
     setSection && setSection(idx)
   }
 
@@ -34,7 +32,7 @@ const DesktopNavigation = ({ setSection }) => {
                 className={clsx(
                   'text-sm text-gray-400 hover:text-violet-700 hover:font-bold',
                   {
-                    'text-violet-700 font-bold': isMenuActive === idx,
+                    'text-violet-700 font-bold': section === idx,
                   },
                 )}
                 onClickCapture={() => setSectionToScroll(idx)}
@@ -59,6 +57,11 @@ const DesktopNavigation = ({ setSection }) => {
       </div>
     </React.Fragment>
   )
+}
+
+DesktopNavigation.propTypes = {
+  section: PropTypes.number,
+  setSection: PropTypes.func,
 }
 
 export default DesktopNavigation
