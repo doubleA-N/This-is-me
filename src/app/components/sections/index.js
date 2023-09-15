@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import MeSection from '../me-section'
 import AboutSection from '../about-section'
 
-const Section = ({ section }) => {
+const Section = ({ section, setSection }) => {
   useEffect(() => {
     const scrollToElements = () => {
       scroller.scrollTo(section, {
-        duration: 1500,
+        duration: 1000,
         delay: 2,
         smooth: true,
         offset: -120,
@@ -24,14 +24,15 @@ const Section = ({ section }) => {
 
   return (
     <React.Fragment>
-      <MeSection />
-      <AboutSection />
+      <MeSection setSection={setSection} />
+      <AboutSection setSection={setSection} />
     </React.Fragment>
   )
 }
 
 Section.propTypes = {
   section: PropTypes.number,
+  setSection: PropTypes.func,
 }
 
 export default Section

@@ -9,7 +9,7 @@ const CommonLayout = () => {
   return (
     <React.Fragment>
       <Navigation section={section} setSection={setSection} />
-      <Section section={section} />
+      <Section section={section} setSection={setSection} />
     </React.Fragment>
   )
 }
