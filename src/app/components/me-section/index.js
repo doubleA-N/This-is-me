@@ -7,7 +7,7 @@ import { downloadMyResume } from './utils'
 const MeSection = () => {
   return (
     <Element
-      name={0}
+      name={'0'}
       className="h-fit bg-cover bg-center bg-gradient-to-r from-indigo-200"
     >
       <div className="flex flex-col-reverse md:flex-row justify-center m-8 md:m-20">

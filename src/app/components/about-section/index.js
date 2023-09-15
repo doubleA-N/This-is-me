@@ -5,7 +5,7 @@ import MyTimeline from './timeline'
 const AboutSection = ({}) => {
   return (
     <Element
-      name={1}
+      name={'1'}
       className="my-20 flex flex-col justify-center items-center"
     >
       <div className="flex flex-col items-center">

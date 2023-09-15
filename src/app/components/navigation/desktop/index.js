@@ -9,7 +9,7 @@ import { handleSocialLinkClick } from '../utils'
 
 const DesktopNavigation = ({ section, setSection }) => {
   const setSectionToScroll = (idx) => {
-    setSection && setSection(idx)
+    setSection && setSection(`${idx}`)
   }
 
   return (
