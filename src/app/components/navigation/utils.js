@@ -17,7 +17,7 @@ const handleCloseMobileNav = (menus, setSection) => {
 
   lists?.forEach((list, idx) => {
     list.addEventListener('click', () => {
-      setSection(idx)
+      setSection(`${idx}`)
       menus?.forEach((menu) => {
         menu.classList.toggle('hidden')
       })

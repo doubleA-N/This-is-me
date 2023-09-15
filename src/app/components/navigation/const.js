@@ -2,8 +2,8 @@ import { ICONS } from '../commons/icons/const'
 
 export const NAVIGATION_MENUS = [
   { title: 'Me', shouldShowNextMenu: true },
-  { title: 'About', shouldShowNextMenu: true },
-  { title: 'Skills', shouldShowNextMenu: false },
+  { title: 'About', shouldShowNextMenu: false },
+  // { title: 'Skills', shouldShowNextMenu: false },
 ]
 
 export const NAVIGATION_LINKS = [
