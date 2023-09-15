@@ -32,7 +32,7 @@ const DesktopNavigation = ({ section, setSection }) => {
                 className={clsx(
                   'text-sm text-gray-400 hover:text-violet-700 hover:font-bold',
                   {
-                    'text-violet-700 font-bold': section === idx,
+                    'text-violet-700 font-bold': section === `${idx}`,
                   },
                 )}
                 onClickCapture={() => setSectionToScroll(idx)}
